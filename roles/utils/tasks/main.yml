@@ -1,0 +1,36 @@
+---
+# tasks file for utils
+- name: System
+  become: true
+  ansible.builtin.package:
+    name:
+    - htop
+    - nmap
+    - man-db
+    - zsh
+    - git
+    - stylua
+    state: latest
+
+- name: App
+  become: true
+  ansible.builtin.package:
+    name:
+    - firefox
+    - vscode
+    - alacritty
+    state: latest
+
+- name: Languages
+  become: true
+  ansible.builtin.package:
+    name:
+    - go
+    state: latest
+
+- name: DevOps
+  become: true
+  ansible.builtin.package:
+    name:
+    - terraform
+    state: latest

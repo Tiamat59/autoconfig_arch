@@ -1,0 +1,13 @@
+---
+# tasks file for neovim
+- name: Install neovim
+  become: true
+  ansible.builtin.package:
+    name:
+    - neovim
+    state: latest
+
+- name: Clone a repo
+  ansible.builtin.git:
+    repo: https://github.com/Tiamat59/nvim_config.git
+    dest: "{{ ansible_user_dir }}/.config/nvim/nvim_test"
