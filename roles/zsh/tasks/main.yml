@@ -9,7 +9,8 @@
   register: zsh
 
 - name: Active zsh
-  ansible.builtin.command: 'chsh -s /usr/bin/zsh'
+  become: true
+  ansible.builtin.command: "chsh -s /usr/bin/zsh romain {{ ansible_env['USER'] }}"
   when: not ansible_facts['user_shell'] == "/usr/bin/zsh"
 
 - name: test_ohmyzsh_folder
