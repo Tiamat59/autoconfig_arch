@@ -9,7 +9,6 @@
   register: zsh
 
 - name: Active zsh
-  become: true
   ansible.builtin.command: 'chsh -s /usr/bin/zsh'
   when: not ansible_facts['user_shell'] == "/usr/bin/zsh"
 
