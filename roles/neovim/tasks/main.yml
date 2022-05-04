@@ -12,3 +12,4 @@
     repo: "{{ github_address }}/nvim_config.git"
     dest: "{{ ansible_user_dir }}/.config/nvim/nvim"
     key_file: "{{ ansible_user_dir }}/.ssh/{{ github_key_name }}"
+    accept_hostkey: yes
