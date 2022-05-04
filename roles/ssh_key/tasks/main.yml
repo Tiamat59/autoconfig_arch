@@ -22,4 +22,4 @@
      
      {{ sshkey.ssh_public_key }}
      
-  when: not check_sshkey.stat.exists
+  when: sshkey is changed
