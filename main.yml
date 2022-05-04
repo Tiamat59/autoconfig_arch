@@ -7,8 +7,8 @@
     - name: utils
     # - name: { jahrik.yay, install: true } 
     - name: docker
-    - name: neovim
     - name: ssh_key
+    - name: neovim
     - name: zsh
     - name: dotfiles
     - name: stow
