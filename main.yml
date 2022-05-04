@@ -1,13 +1,18 @@
 ---
 - hosts: 127.0.0.1
   connection: local
+  vars_files:
+    - vars.yml
   roles:
-    - { role: utils }
-    # - { role: jahrik.yay, install: true }
-    - { role: docker }
-    - { role: neovim }
-    - { role: ssh_key }
-    - { role: zsh }
+    - name: utils
+    # - name: { jahrik.yay, install: true } 
+    - name: docker
+    - name: neovim
+    - name: ssh_key
+    - name: zsh
+    - name: dotfiles
+    - name: stow
+    
 
 
   #   collections:

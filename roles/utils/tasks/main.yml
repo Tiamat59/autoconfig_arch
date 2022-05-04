@@ -10,6 +10,8 @@
     - zsh
     - git
     - stylua
+    - stow
+    - tree
     state: latest
 
 - name: App

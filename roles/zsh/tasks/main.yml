@@ -23,8 +23,14 @@
     repo: https://github.com/ohmyzsh/ohmyzsh.git
     dest: /tmp/oh-my-zsh
     depth: 1
-  when: not ohmyzsh_folder.stat.exists
+  # when: not ohmyzsh_folder.stat.exists
   
 - name: Install ohmyzsh
   ansible.builtin.command: sh /tmp/oh-my-zsh/tools/install.sh
   when: not ohmyzsh_folder.stat.exists
+
+- name: zsh-auto-suggestion
+  git: 
+    repo: https://github.com/zsh-users/zsh-autosuggestions.git
+    dest: "{{ ansible_user_dir }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+  # a ajouter l'activation du plugin dans .zshrc
