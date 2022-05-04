@@ -1,0 +1,18 @@
+---
+# tasks file for stow
+- name: test_zsh_symlink
+  stat:
+    path: "{{ ansible_user_dir }}/.zshrc"
+  register: zshrc_symlink
+
+- name: Create stow symlinks for .zshrc
+  shell: |
+    cd {{ ansible_user_dir }}/.dotfiles
+    mv {{ ansible_user_dir }}/.zshrc {{ ansible_user_dir }}/.zshrc.pre-stow
+
+    stow zsh
+    source {{ ansible_user_dir }}/.zshrc
+  when: | 
+    zshrc_symlink.stat.islnk is not defined or
+    zshrc_symlink.stat.islnk is defined and zshrc_symlink.stat.islnk == False
+  

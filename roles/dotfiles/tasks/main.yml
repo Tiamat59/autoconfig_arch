@@ -1,0 +1,12 @@
+---
+# - name: load ssh key
+#   shell: eval `ssh-agent -s`
+
+# - name: load ssh key
+#   shell: "ssh-add {{ ansible_user_dir }}/.ssh/{{ github_key_name }}"
+
+- name: dotfiles
+  git: 
+    repo: "{{ github_address }}/dotfiles.git"
+    dest: "{{ ansible_user_dir }}/.dotfiles"
+    key_file: "{{ ansible_user_dir }}/.ssh/{{ github_key_name }}"
