@@ -5,9 +5,17 @@
     path: "{{ ansible_user_dir }}/.zshrc"
   register: zshrc_symlink
 
-- name: Create stow symlinks for .zshrc
+# Backup seulement si .zshrc existe et qu'il est un fichier
+- name: backup_old_zshrc
   ansible.builtin.shell: |
     mv {{ ansible_user_dir }}/.zshrc {{ ansible_user_dir }}/.zshrc.pre-stow
+  when: | 
+    zshrc_symlink.stat.islnk is defined and zshrc_symlink.stat.islnk == False
+
+# lancer le stow si pas de fichier .zshrc
+# ou quand .zshrc existe mais n'est pas un lien symbolique
+- name: Create stow symlinks for .zshrc
+  ansible.builtin.shell: |
     cd {{ ansible_user_dir }}/.dotfiles
 
     stow zsh
