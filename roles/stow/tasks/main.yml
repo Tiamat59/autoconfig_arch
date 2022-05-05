@@ -1,12 +1,12 @@
 ---
 # tasks file for stow
 - name: test_zsh_symlink
-  stat:
+  ansible.builtin.stat:
     path: "{{ ansible_user_dir }}/.zshrc"
   register: zshrc_symlink
 
 - name: Create stow symlinks for .zshrc
-  shell: |
+  ansible.builtin.command: |
     cd {{ ansible_user_dir }}/.dotfiles
     mv {{ ansible_user_dir }}/.zshrc {{ ansible_user_dir }}/.zshrc.pre-stow
 

@@ -1,3 +1,87 @@
 ---
+# Common
 github_key_name: id_rsa_perso_github
 github_address: git@github.com:Tiamat59
+
+
+# packages:
+#   archlinux:
+#     # system
+#     - htop
+#     - fd
+#     - rg 
+#     - nmap
+#     - man-db
+#     - nerd-fonts
+#     - zsh
+#     - git
+#     - stylua
+#     - stow
+#     - tree
+#     # app
+#     - firefox
+#     - vscode
+#     - alacritty
+#     # lang
+#     - go
+#     # devops
+#     - terraform
+#   ubuntu:
+#     # system
+#     - htop
+#     - nmap
+#     - man-db
+#     - zsh
+#     - git
+#     - stow
+#     - tree
+#     # app
+#     - firefox
+#     # lang
+#     - golang
+#     # devops
+
+
+# # Archlinux
+# packages_system_arch:
+#   - htop
+#   - fd
+#   - rg 
+#   - nmap
+#   - man-db
+#   - nerd-fonts
+#   - zsh
+#   - git
+#   - stylua
+#   - stow
+#   - tree
+
+# packages_app_arch:
+#   - firefox
+#   - vscode
+#   - alacritty
+
+# packages_lang_arch:
+#   - go
+
+# packages_devops_arch:
+#   - terraform
+
+# # Ubuntu
+# packages_system_ubuntu:
+#   - htop
+#   - nmap
+#   - man-db
+#   - zsh
+#   - git
+#   - stow
+#   - tree
+
+# packages_app_ubuntu:
+#   - firefox
+
+# packages_lang_ubuntu:
+#   - golang
+
+# packages_devops_ubuntu:
+#   - terraform

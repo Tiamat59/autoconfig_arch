@@ -1,7 +1,7 @@
 ---
 # tasks file for ssh_key
 - name: generate ssh key for personal github
-  user:
+  ansible.builtin.user:
     name: "{{ ansible_env['USER'] }}"
     generate_ssh_key: yes
     ssh_key_type: rsa
@@ -11,12 +11,12 @@
   register: sshkey
 
 - name: Check ssh key file exist
-  stat:
+  ansible.builtin.stat:
     path: "{{ ansible_user_dir }}/.ssh/{{ github_key_name }}"
   register: check_sshkey
 
 - name: Upload ssh key_file on github
-  pause: 
+  ansible.builtin.pause: 
     prompt: |
      Autoriser la clé publique sur github avant de continuer :
      

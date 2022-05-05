@@ -3,37 +3,6 @@
 - name: System
   become: true
   ansible.builtin.package:
-    name:
-    - htop
-    - nmap
-    - man-db
-    - nerd-fonts
-    - zsh
-    - git
-    - stylua
-    - stow
-    - tree
+    name: "{{ item }}"
     state: latest
-
-- name: App
-  become: true
-  ansible.builtin.package:
-    name:
-    - firefox
-    - vscode
-    - alacritty
-    state: latest
-
-- name: Languages
-  become: true
-  ansible.builtin.package:
-    name:
-    - go
-    state: latest
-
-- name: DevOps
-  become: true
-  ansible.builtin.package:
-    name:
-    - terraform
-    state: latest
+  loop: "{{ packages }}"
