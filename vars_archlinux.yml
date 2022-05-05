@@ -1,0 +1,22 @@
+---
+packages:
+  # system
+  - htop
+  - fd
+  - rg 
+  - nmap
+  - man-db
+  - nerd-fonts
+  - zsh
+  - git
+  - stylua
+  - stow
+  - tree
+  # app
+  - firefox
+  - vscode
+  - alacritty
+  # lang
+  - go
+  # devops
+  - terraform

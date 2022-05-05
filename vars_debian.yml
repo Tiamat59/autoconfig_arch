@@ -1,0 +1,15 @@
+---
+packages:
+  # system
+  - htop
+  - nmap
+  - man-db
+  - zsh
+  - git
+  - stow
+  - tree
+  # app
+  - firefox
+  # lang
+  - golang
+  # devops
