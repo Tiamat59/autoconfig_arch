@@ -7,8 +7,8 @@
 
 - name: Create stow symlinks for .zshrc
   ansible.builtin.command: |
-    cd {{ ansible_user_dir }}/.dotfiles
     mv {{ ansible_user_dir }}/.zshrc {{ ansible_user_dir }}/.zshrc.pre-stow
+    cd {{ ansible_user_dir }}/.dotfiles
 
     stow zsh
     source {{ ansible_user_dir }}/.zshrc
