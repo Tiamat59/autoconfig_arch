@@ -17,7 +17,6 @@
 - name: Create stow symlinks for .zshrc
   ansible.builtin.shell: |
     cd {{ ansible_user_dir }}/.dotfiles
-
     stow zsh
     source {{ ansible_user_dir }}/.zshrc
   when: | 
