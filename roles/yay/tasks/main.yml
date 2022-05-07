@@ -9,5 +9,5 @@
 - name: Install yay
   ansible.builtin.shell: |
     cd /tmp/yay
-    makepkg -si
+    makepkg -si --noconfirm
   when: ansible_os_family == 'Archlinux'
