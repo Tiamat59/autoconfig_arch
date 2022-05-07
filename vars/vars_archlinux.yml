@@ -25,4 +25,4 @@ packages:
   - terraform
 
 aur_packages:
-  - nerd-fonts
+  - nerd-fonts-complete
