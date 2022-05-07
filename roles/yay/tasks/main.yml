@@ -3,7 +3,7 @@
 - name: Clone a repo yay
   ansible.builtin.git:
     repo: "https://aur.archlinux.org/yay.git"
-    dest: "/tmp"
+    dest: "/tmp/yay"
   when: ansible_os_family == 'Archlinux'
 
 - name: Install yay
