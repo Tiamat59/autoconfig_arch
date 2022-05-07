@@ -3,6 +3,7 @@ packages:
   # system
   - base-devel
   - htop
+  - neofetch
   - fd
   - ripgrep 
   - nmap
@@ -26,3 +27,4 @@ packages:
 
 aur_packages:
   - nerd-fonts-complete
+  - papirus-icon-theme
