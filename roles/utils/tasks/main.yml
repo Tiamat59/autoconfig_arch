@@ -24,9 +24,19 @@
   become: true
   when: ansible_os_family == 'Debian'
 
-- name: System
+- name: Install packages
   become: true
   ansible.builtin.package:
     name: "{{ item }}"
     state: latest
   loop: "{{ packages }}"
+
+- name: Install AUR packages
+  become: true
+  ansible.builtin.package:
+    name: "{{ item }}"
+    state: latest
+    executable: yay
+    extra_args: --builddir /var/cache/yay
+  loop: "{{ aur_packages }}"
+  when: ansible_os_family == 'Archlinux'

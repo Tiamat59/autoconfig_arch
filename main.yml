@@ -5,8 +5,8 @@
     - "vars/common.yml"
     - "vars/vars_{{ ansible_os_family | lower }}.yml"
   roles:
-    - name: utils
     - name: yay
+    - name: utils
     # - name: { jahrik.yay, install: true } 
     - name: docker
     - name: ssh_key

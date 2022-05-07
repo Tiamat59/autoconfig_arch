@@ -23,3 +23,6 @@ packages:
   - python-black
   # devops
   - terraform
+
+aur_packages:
+  - nerd-fonts
