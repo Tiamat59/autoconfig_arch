@@ -4,25 +4,25 @@
   community.general.pacman:
     update_cache: yes
   become: true
-  when: ansible_os_family == "Archlinux"
+  when: ansible_os_family == 'Archlinux'
 
 - name: Upgrade packages
   community.general.pacman:
     upgrade: yes
   become: true
-  when: ansible_os_family == "Archlinux"
+  when: ansible_os_family == 'Archlinux'
 
 - name: Update list
   apt:
     update_cache: yes
   become: true
-  when: ansible_os_family == "Debian"
+  when: ansible_os_family == 'Debian'
 
 - name: Upgrade packages
   apt:
     name: '*'
   become: true
-  when: ansible_os_family == "Debian"
+  when: ansible_os_family == 'Debian'
 
 - name: System
   become: true
