@@ -1,6 +1,7 @@
 ---
 packages:
   # system
+  - base-devel
   - htop
   - fd
   - ripgrep 

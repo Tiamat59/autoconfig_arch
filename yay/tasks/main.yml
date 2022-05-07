@@ -1,0 +1,13 @@
+---
+# tasks file for yay
+- name: Clone a repo yay
+  ansible.builtin.git:
+    repo: "https://aur.archlinux.org/yay.git"
+    dest: "/tmp"
+  when: ansible_os_family == 'Archlinux'
+
+- name: Install yay
+  ansible.builtin.shell: |
+    cd /tmp
+    makepkg -si
+  when: ansible_os_family == 'Archlinux'
