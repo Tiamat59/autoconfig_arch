@@ -1,5 +1,29 @@
 ---
 # tasks file for utils
+- name: Update list
+  community.general.pacman:
+    update_cache: yes
+  become: true
+  when: "{{ ansible_os_family }} == Archlinux"
+
+- name: Upgrade packages
+  community.general.pacman:
+    upgrade: yes
+  become: true
+  when: "{{ ansible_os_family }} == Archlinux"
+
+- name: Update list
+  apt:
+    update_cache: yes
+  become: true
+  when: "{{ ansible_os_family }} == Debian"
+
+- name: Upgrade packages
+  apt:
+    name: '*'
+  become: true
+  when: "{{ ansible_os_family }} == Debian"
+
 - name: System
   become: true
   ansible.builtin.package:

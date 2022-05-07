@@ -2,6 +2,8 @@
 packages:
   # system
   - htop
+  - fd-find
+  - ripgrep 
   - nmap
   - man-db
   - zsh
@@ -11,5 +13,5 @@ packages:
   # app
   - firefox
   # lang
-  - golang
+  - golang # a remmplacer car version acienne sur les repo
   # devops

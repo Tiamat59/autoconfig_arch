@@ -3,10 +3,10 @@ packages:
   # system
   - htop
   - fd
-  - rg 
+  - ripgrep 
   - nmap
   - man-db
-  - nerd-fonts
+  # - nerd-fonts # a installer avec yay
   - zsh
   - git
   - stylua
@@ -18,5 +18,7 @@ packages:
   - alacritty
   # lang
   - go
+  - nodejs
+  - python-black
   # devops
   - terraform
