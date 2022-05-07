@@ -1,0 +1,9 @@
+---
+# tasks file for aur_packages
+- name: Install AUR packages
+  kewlfft.aur.aur:
+    use: yay
+    name: "{{ item }}"
+    state: latest
+  loop: "{{ aur_packages }}"
+  when: ansible_os_family == 'Archlinux'

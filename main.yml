@@ -7,6 +7,7 @@
   roles:
     - name: utils
     - name: yay
+    - name: aur_packages
     # - name: { jahrik.yay, install: true } 
     - name: docker
     - name: ssh_key
