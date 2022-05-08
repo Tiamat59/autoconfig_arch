@@ -18,6 +18,7 @@ packages:
   - firefox
   - vscode
   - alacritty
+  - kitty
   # lang
   - go
   - nodejs
